@@ -24,7 +24,7 @@ pip install --upgrade pip
 
 here = path.abspath(path.dirname(__file__))
 
-with open(path.join(here, 'README.rst'), encoding='utf-8') as readme_file:
+with open(path.join(here, 'README.md'), encoding='utf-8') as readme_file:
     readme = readme_file.read()
 
 with open(path.join(here, 'requirements.txt')) as requirements_file:
@@ -39,9 +39,10 @@ setup(
     cmdclass=versioneer.get_cmdclass(),
     description="SRW tools for image processing from beamlines",
     long_description=readme,
-    author="NSLS-II-CHX",
-    author_email='',
-    url='https://github.com//srw-image-tools',
+    long_description_content_type='text/markdown',
+    author="Rebecca Coles",
+    author_email='rcoles@bnl.gov',
+    url='https://github.com/NSLS-II-CHX/srw-image-tools',
     python_requires='>={}'.format('.'.join(str(n) for n in min_version)),
     packages=find_packages(exclude=['docs', 'tests']),
     entry_points={
