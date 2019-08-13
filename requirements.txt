@@ -1,4 +1,4 @@
 h5py
 matplotlib
 numpy
-git+https://github.com/NSLS-II-CHX/pyCHX
+git+git://github.com/NSLS-II-CHX/pyCHX
