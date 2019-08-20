@@ -34,13 +34,6 @@ External CHX package:<br/>
 * pyCHX.chx_xpcs_xsvs_jupyter_V1:<br/> 
 	https://github.com/NSLS-II-CHX/pyCHX/blob/master/pyCHX/chx_xpcs_xsvs_jupyter_V1.py
 
-## Useful Default Variables <a name="useful_variables"></a>
-y_crd: horizontal cut at row<br/>
-x_crd: vertical cut at column<br/>
-x1, x2, y1, y2: crop image at given columns and rows (Example: x1, x2, y1, y2 = 900, 1650, 750, 1400)<br/>
-dpi: dpi of images<br/>
-eiger_size_per_pixel: eiger is 75 um per pixel so typically eiger_size_per_pixel = 0.075<br/>
-
 ## Functions <a name="functions"></a>
 
 ### save_hdf5 <a name="save_hdf5"></a>
