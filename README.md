@@ -60,11 +60,12 @@ return: string status of dataset creation.
 ### plot_profile_horiz <a name="plot_profile_horiz"></a>
 Show plot of intensity versus horizontal position.<br/>
 
-`def plot_profile_horiz(data, uid, y_crd, clim=(0, 200), cmap='afmhot', line_color='red', linestyles=None)`
+`def plot_profile_horiz(data, uid, y_crd=1200, dpi=80, clim=(0, 200), cmap='afmhot', line_color='deepskyblue', linestyles=None)`
 
 param data: HDF5 binary data from CHX measurement.<br/>
 param uid: unique ID automatically assigned to a CHX measurement.<br/>
-param y_crd: add a horizontal line across the axis at a given location on the image.<br/>
+param y_crd=1200: add a horizontal line across the axis at a given location on the image.<br/>
+param dpi=80: dpi (dots per inch) for output image.<br/>
 param clim=(0, 200): sets the color limits of the current image.<br/>
 param cmap='afmhot': color map (https://matplotlib.org/examples/color/colormaps_reference.html)<br/>
 param line_color='red': color of line that will show the cut location.<br/>
@@ -72,11 +73,12 @@ param line_color='red': color of line that will show the cut location.<br/>
 ### plot_profile_vert <a name="plot_profile_vert"></a>
 Show plot of intensity versus vertical position.<br/>
 
-`def plot_profile_vert(data, uid, x_crd, clim=(0, 200), cmap='afmhot', line_color='red', linestyles=None)`
+`def plot_profile_vert(data, uid, x_crd=1100, dpi=80, clim=(0, 200), cmap='afmhot', line_color='deepskyblue', linestyles=None)`
 
 param data: HDF5 binary data from CHX measurement.<br/>
 param uid: unique ID automatically assigned to a CHX measurement.<br/>
-param x_crd: add a vertical line across the axis at a given location on the image.<br/>
+param x_crd=1100: add a vertical line across the axis at a given location on the image.<br/>
+param dpi=80: dpi (dots per inch) for output image.<br/>
 param clim=(0, 200): sets the color limits of the current image.<br/>
 param cmap='afmhot': color map (https://matplotlib.org/examples/color/colormaps_reference.html) <br/>
 param line_color='red': color of line that will show the cut location.<br/> 
@@ -85,31 +87,36 @@ param linestyles=None: custom linestyles.<br/>
 ### display_image_in_actual_size <a name="display_image_in_actual_size"></a>
 Display CHX Eiger image in full size and save the image as a TIFF with dual pixel and mm axis.<br/> 
 
-`def display_image_in_actual_size(im, uid, clim, cmap='gist_stern')`
+`def display_image_in_actual_size(img, uid, dpi=80, eiger_size_per_pixel=0.075, clim=(0, 100), cmap='gist_stern')`
 
 param im: eiger detector image.<br/> 
 param uid: unique ID automatically assigned to a CHX measurement.<br/> 
+param dpi=80: dpi (dots per inch) for output image.<br/> 
+param eiger_size_per_pixel=0.075: eiger camera has 75 um per pixel.<br/> 
 param cmap='gist_stern': color map (https://matplotlib.org/examples/color/colormaps_reference.html) <br/> 
 param clim: sets the color limits of the current image.<br/> 
 
 ### display_cropped_image <a name="display_cropped_image"></a>
 Display CHX eiger image cropped to user specifications and save the image as a TIFF with dual pixel and mm axis.<br/> 
  
-`def display_cropped_image(im, uid, x1, x2, y1, y2, clim, cmap='gist_stern')`
+`def display_cropped_image(img, uid, x1=900, x2=1650, y1=750, y2=1400, dpi=80, eiger_size_per_pixel=0.075, 
+                          clim=(0, 100), cmap='gist_stern')`
 
 param im: eiger detector image.<br/>
 param uid: unique ID automatically assigned to a CHX measurement.<br/>
-param x1: x-axis stating location (columns).<br/>
-param x2: x-axis final location (columns).<br/>
-param y1: y-axis stating location (rows).<br/>
+param x1=900: x-axis stating location (columns).<br/>
+param x2=1650: x-axis final location (columns).<br/>
+param y1=750: y-axis stating location (rows).<br/>
 param y2: y-axis final location (rows).<br/>
+param dpi=80: dpi (dots per inch) for output image.<br/>
+param eiger_size_per_pixel=0.075: eiger camera has 75 um per pixel.<br/>
 param cmap='gist_stern': color map (https://matplotlib.org/examples/color/colormaps_reference.html)<br/>
 param clim: sets the color limits of the current image.<br/>
 
-### plot_eiger <a name="plot_eiger"></a>
+### plot_eiger_for_srw <a name="plot_eiger"></a>
 Display CHX eiger image: fullsize, cropped to user specifications, and with horizontal and vertical cuts, and save the plots and images as a TIFFs. <br/> 
 
-`def plot_eiger(uid, det='eiger4m_single_image', cmap='afmhot', clim=(0, 100), mean=False, frame_num=0, grid=False)`
+`def plot_eiger_for_srw(uid, det='eiger4m_single_image', cmap='afmhot', clim=(0, 100), mean=False, frame_num=0, grid=False)`
 
 param uid: unique ID automatically assigned to a CHX measurement.<br/> 
 param det='eiger4m_single_image': which eiger dector.<br/> 
@@ -165,12 +172,13 @@ where 1b9ff7 is the UID for the CHX measurement, gives the output:
  'verbose': True}
  ```
  
- ### plot_eiger <a name="plot_eiger"></a>
- Using the plot_eiger definition:<br/> 
+ ### plot_eiger_for_srw <a name="plot_eiger"></a>
+ Using the plot_eiger_for_srw definition:<br/> 
  
- `plot_eiger('1b9ff7', cmap='gist_stern', frame_num=0)`
+ `def plot_eiger_for_srw(uid, det='eiger4m_single_image', cmap='afmhot',
+                       clim=(0, 100), mean=False, frame_num=0, grid=False)`
  
- where 1b9ff7 is the UID for the CHX measurement, gives the output:<br/> 
+ where if, for example, 1b9ff7 is the UID for the CHX measurement, gives the output:<br/> 
  
 ```
 {'eiger4m_single_stats4_total', 'eiger4m_single_stats2_total', 'eiger4m_single_image', 'eiger4m_single_stats3_total', 'eiger4m_single_stats1_total', 'eiger4m_single_stats5_total'}
