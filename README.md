@@ -3,7 +3,7 @@ Retrieve data from CHX (NSLSII Hard X-ray beamline) BlueSky servers and edit ima
 
 Title: CHX-axis-labels-and-cropping<br/>
 Author: Rebecca Coles<br/>
-Updated on Aug 08, 2019<br/>
+Updated on Aug 20, 2019<br/>
 
 This notebook can be used on the CHX Jupyter Hub:
 https://notebook.nsls2.bnl.gov
