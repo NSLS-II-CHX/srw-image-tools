@@ -20,17 +20,14 @@ https://notebook.nsls2.bnl.gov
     6. [plot_eiger](#plot_eiger)
 4. [Example Output](#example_output)
     1. [get_meta_data](#get_meta_data)
-    2. [plot_eiger](#plot_eiger)
+    2. [plot_eiger_for_srw](#plot_eiger)
 
 ## Required Python Packages <a name="required"></a>
 Required Python Packages:<br/>
 * os: https://docs.python.org/3/library/os.html
-* datetime (datetime): https://docs.python.org/3/library/datetime.html
 * matplotlib.pyplot: https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.plot.html
 * numpy: https://numpy.org/
 * h5py: https://www.h5py.org/
-* itertools: https://docs.python.org/3/library/itertools.html
-* PIL (Image): https://pillow.readthedocs.io/en/stable/reference/Image.html
 * warnings: https://docs.python.org/3/library/warnings.html
 
 External CHX package:<br/>
