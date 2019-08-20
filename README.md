@@ -1,7 +1,7 @@
-# NSLSII-CHX-image-tools
+# srw-image-tools
 Retrieve data from CHX (NSLSII Hard X-ray beamline) BlueSky servers and edit images from the eiger detector.
 
-Title: CHX-axis-labels-and-cropping<br/>
+Title: srw-image-tools<br/>
 Author: Rebecca Coles<br/>
 Updated on Aug 20, 2019<br/>
 
