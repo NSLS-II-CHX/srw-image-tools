@@ -16,7 +16,7 @@ https://notebook.nsls2.bnl.gov
     3. [plot_profile_vert](#plot_profile_vert)
     4. [display_image_in_actual_size](#display_image_in_actual_size)
     5. [display_cropped_image](#display_cropped_image)
-    6. [plot_eiger](#plot_eiger)
+    6. [plot_eiger_for_srw](#plot_eiger)
 3. [Example Output](#example_output)
     1. [get_meta_data](#get_meta_data)
     2. [plot_eiger_for_srw](#plot_eiger)
